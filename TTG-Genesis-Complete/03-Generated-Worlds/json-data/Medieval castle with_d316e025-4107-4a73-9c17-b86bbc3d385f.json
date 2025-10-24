@@ -1,0 +1,157 @@
+{
+  "name": "Medieval castle with",
+  "description": "Medieval castle with knight NPCs and dragon boss fight",
+  "theme": "medieval",
+  "generated_at": "2025-08-08T16:11:45.917401",
+  "environment": {
+    "terrain": "mountainous",
+    "lighting": "dynamic",
+    "weather": "overcast",
+    "structures": [
+      {
+        "type": "castle",
+        "name": "Royal Castle",
+        "location": {
+          "x": 0,
+          "y": 10,
+          "z": 0
+        }
+      },
+      {
+        "type": "barracks",
+        "name": "Guard Barracks",
+        "location": {
+          "x": -20,
+          "y": 0,
+          "z": -10
+        }
+      },
+      {
+        "type": "smithy",
+        "name": "Royal Smithy",
+        "location": {
+          "x": 15,
+          "y": 0,
+          "z": 15
+        }
+      }
+    ]
+  },
+  "npcs": [
+    {
+      "name": "Castle Guard",
+      "type": "protector",
+      "dialogue": [
+        "Halt! State your business.",
+        "The kingdom is under threat."
+      ],
+      "location": {
+        "x": -10,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "name": "Royal Advisor",
+      "type": "quest_giver",
+      "dialogue": [
+        "The king requires your service.",
+        "Dark times are upon us."
+      ],
+      "location": {
+        "x": 0,
+        "y": 0,
+        "z": 10
+      }
+    },
+    {
+      "name": "Blacksmith",
+      "type": "merchant",
+      "dialogue": [
+        "Fine weapons and armor!",
+        "Forged with the finest steel."
+      ],
+      "location": {
+        "x": 10,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "quests": [
+    {
+      "name": "Defend the Castle",
+      "description": "Help defend the castle from the orc invasion",
+      "objectives": [
+        "Man the battlements",
+        "Repel the first wave",
+        "Defeat the orc chieftain"
+      ],
+      "rewards": [
+        "Knight's Honor",
+        "Royal Sword"
+      ]
+    },
+    {
+      "name": "Royal Mission",
+      "description": "Complete a secret mission for the king",
+      "objectives": [
+        "Meet the royal advisor",
+        "Infiltrate enemy territory",
+        "Retrieve the stolen artifact"
+      ],
+      "rewards": [
+        "Royal Favor",
+        "Legendary Equipment"
+      ]
+    }
+  ],
+  "player": {
+    "starting_position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "abilities": [
+      "walk",
+      "run",
+      "jump",
+      "interact"
+    ]
+  },
+  "combat": {
+    "enabled": true,
+    "combat_type": "real_time",
+    "weapons": [
+      "Steel Sword",
+      "War Hammer",
+      "Crossbow"
+    ],
+    "enemies": [
+      "Orc Warrior",
+      "Skeleton Knight",
+      "Dragon"
+    ],
+    "mechanics": [
+      "health",
+      "stamina",
+      "blocking",
+      "dodging"
+    ]
+  },
+  "ue5_integration": {
+    "cpp_classes": [
+      "Medieval castle withQuestSystem",
+      "Medieval castle withNPCSystem",
+      "Medieval castle withEnvironment"
+    ],
+    "blueprints": [
+      "BP_Medieval castle with_QuestSystem",
+      "BP_Medieval castle with_NPC",
+      "BP_Medieval castle with_Environment"
+    ],
+    "level_name": "Medieval castle with_Level",
+    "project_ready": false,
+    "auto_compile": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "system": {
+    "version": "2.0",
+    "debug_mode": true,
+    "max_worlds": 100,
+    "auto_cleanup": true
+  },
+  "generation": {
+    "default_model": "llama3",
+    "timeout_seconds": 300,
+    "auto_screenshots": true,
+    "auto_3d_preview": true
+  },
+  "ue5": {
+    "installation_path": "",
+    "python_path": "",
+    "auto_detect": true,
+    "project_template": "ThirdPerson"
+  },
+  "web_interface": {
+    "host": "0.0.0.0",
+    "port": 5000,
+    "auto_open_browser": true
+  },
+  "paths": {
+    "worlds_db": "03-Generated-Worlds/worlds_db.json",
+    "history_file": "03-Generated-Worlds/generation_history.json",
+    "screenshots_dir": "03-Generated-Worlds/screenshots",
+    "thumbnails_dir": "03-Generated-Worlds/thumbnails"
+  }
+}

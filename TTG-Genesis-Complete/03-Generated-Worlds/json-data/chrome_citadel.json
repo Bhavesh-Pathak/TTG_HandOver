@@ -1,0 +1,126 @@
+{
+    "metadata": {
+        "level_name": "Chrome Citadel",
+        "description": "An immersive futuristic adventure: Create a Futuristic World The player has to Defeat Robot gang to complete the quests",
+        "difficulty": "easy",
+        "estimated_playtime": "15-20 minutes",
+        "theme": "futuristic"
+    },
+    "environment": {
+        "type": "futuristic",
+        "setting": "An advanced technological environment",
+        "terrain": [
+            "grass",
+            "dirt",
+            "rocks"
+        ],
+        "lighting": "dynamic_lighting",
+        "weather": "clear",
+        "atmosphere": "mysterious",
+        "size": "medium",
+        "assets": [
+            "generic_props"
+        ]
+    },
+    "quests": [
+        {
+            "id": "quest_1",
+            "name": "Defeat the Guardian",
+            "type": "main",
+            "objective": "Defeat the guardian that guards the mysterious_location",
+            "description": "A powerful guardian blocks your path to treasure",
+            "requirements": [],
+            "rewards": {
+                "experience": 100,
+                "gold": 50,
+                "items": [
+                    "quest_1_reward"
+                ]
+            },
+            "location": "mysterious_location",
+            "estimated_time": "10 minutes"
+        }
+    ],
+    "npcs": [
+        {
+            "id": "villager_npc",
+            "name": "Village Elder",
+            "role": "quest_giver",
+            "type": "friendly",
+            "location": "mysterious_location",
+            "dialogue": [
+                "Welcome, brave adventurer!",
+                "Our village needs your help!",
+                "Thank you for coming!"
+            ],
+            "behavior": "stationary_helpful",
+            "stats": {
+                "health": 100,
+                "attack": 0,
+                "defense": 10
+            },
+            "inventory": [
+                "villager_item",
+                "common_item"
+            ]
+        }
+    ],
+    "physics": {
+        "player_abilities": [
+            "walk",
+            "run",
+            "jump",
+            "interact"
+        ],
+        "movement_speed": 5.0,
+        "jump_height": 2.0,
+        "combat_system": "action_based",
+        "interaction_mechanics": [
+            "pickup_items",
+            "talk_to_npcs",
+            "activate_objects"
+        ],
+        "special_mechanics": [
+            "quest_tracking",
+            "inventory_system"
+        ]
+    },
+    "win_conditions": [
+        "Complete the main objective",
+        "Defeat all hostile enemies"
+    ],
+    "lose_conditions": [
+        "Player health reaches 0"
+    ],
+    "assets_required": {
+        "models": [
+            "shield",
+            "weapon_sword",
+            "generic_prop"
+        ],
+        "textures": [
+            "generic_texture"
+        ],
+        "sounds": [
+            "weapon_clash",
+            "ui_sounds",
+            "combat_sounds",
+            "friendly_music",
+            "footsteps",
+            "ambient_background",
+            "npc_talk"
+        ],
+        "effects": [
+            "particle_dust",
+            "light_rays"
+        ],
+        "animations": [
+            "player_walk",
+            "npc_gesture",
+            "attack_animation",
+            "defend_animation",
+            "npc_idle",
+            "player_idle"
+        ]
+    }
+}

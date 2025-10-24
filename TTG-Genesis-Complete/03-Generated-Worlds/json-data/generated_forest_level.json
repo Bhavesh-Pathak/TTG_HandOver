@@ -1,0 +1,169 @@
+{
+    "metadata": {
+        "level_name": "Generated Forest Level",
+        "description": "A forest adventure generated from: Create a small forest clearing with a friendly NPC",
+        "difficulty": "medium",
+        "estimated_playtime": "30-45 minutes",
+        "theme": "forest"
+    },
+    "environment": {
+        "type": "forest",
+        "setting": "forest environment",
+        "terrain": [
+            "grass",
+            "dirt_paths",
+            "rocky_areas",
+            "streams"
+        ],
+        "lighting": "dynamic",
+        "weather": "clear",
+        "atmosphere": "mysterious",
+        "size": "medium",
+        "assets": [
+            "trees",
+            "bushes",
+            "rocks",
+            "flowers",
+            "mushrooms"
+        ]
+    },
+    "quests": [
+        {
+            "id": "forest_quest_1",
+            "name": "Gather Forest Herbs",
+            "type": "main",
+            "objective": "Collect 10 healing herbs from the forest",
+            "description": "The village healer needs herbs to cure the sick",
+            "requirements": [
+                "access_to_forest"
+            ],
+            "rewards": {
+                "experience": 100,
+                "gold": 50,
+                "items": [
+                    "healing_potion"
+                ]
+            },
+            "location": "forest_clearing",
+            "estimated_time": "10 minutes"
+        },
+        {
+            "id": "forest_quest_2",
+            "name": "Defeat the Forest Guardian",
+            "type": "main",
+            "objective": "Defeat the corrupted forest guardian",
+            "description": "A once-peaceful guardian has been corrupted by dark magic",
+            "requirements": [
+                "complete_forest_quest_1"
+            ],
+            "rewards": {
+                "experience": 200,
+                "gold": 100,
+                "items": [
+                    "guardian_sword"
+                ]
+            },
+            "location": "ancient_grove",
+            "estimated_time": "15 minutes"
+        }
+    ],
+    "npcs": [
+        {
+            "id": "forest_villager_1",
+            "name": "Elder Willow",
+            "role": "village_elder",
+            "type": "friendly",
+            "location": "village_center",
+            "dialogue": [
+                "Welcome, traveler!",
+                "The forest is in danger!",
+                "Please help us!"
+            ],
+            "behavior": "stationary_helpful",
+            "stats": {
+                "health": 100,
+                "attack": 0,
+                "defense": 10
+            },
+            "inventory": [
+                "village_key",
+                "quest_scroll"
+            ]
+        },
+        {
+            "id": "forest_enemy_1",
+            "name": "Corrupted Wolf",
+            "role": "forest_enemy",
+            "type": "hostile",
+            "location": "dark_forest",
+            "dialogue": [
+                "*growls menacingly*"
+            ],
+            "behavior": "aggressive_patrol",
+            "stats": {
+                "health": 80,
+                "attack": 25,
+                "defense": 15
+            },
+            "inventory": [
+                "wolf_pelt"
+            ]
+        }
+    ],
+    "physics": {
+        "player_abilities": [
+            "walk",
+            "run",
+            "jump",
+            "interact"
+        ],
+        "movement_speed": 5.0,
+        "jump_height": 2.0,
+        "combat_system": "action_based",
+        "interaction_mechanics": [
+            "pickup_items",
+            "talk_to_npcs",
+            "open_doors"
+        ],
+        "special_mechanics": [
+            "quest_tracking",
+            "inventory_system"
+        ]
+    },
+    "win_conditions": [
+        "Complete all main quests"
+    ],
+    "lose_conditions": [
+        "Player health reaches 0"
+    ],
+    "assets_required": {
+        "models": [
+            "tree_oak",
+            "tree_pine",
+            "bush_berry",
+            "rock_moss",
+            "flower_wild"
+        ],
+        "textures": [
+            "bark_oak",
+            "grass_forest",
+            "dirt_path",
+            "moss_rock",
+            "leaf_texture"
+        ],
+        "sounds": [
+            "ambient_nature",
+            "footsteps",
+            "ui_sounds"
+        ],
+        "effects": [
+            "particle_dust",
+            "light_rays"
+        ],
+        "animations": [
+            "player_walk",
+            "player_idle",
+            "npc_talk"
+        ]
+    }
+}

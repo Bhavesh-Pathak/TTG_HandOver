@@ -1,0 +1,23 @@
+{
+    "EnvironmentData": {
+        "Type": "urban",
+        "Setting": "A bustling city environment",
+        "Terrain": [
+            "streets",
+            "buildings",
+            "parks",
+            "plazas"
+        ],
+        "Lighting": "dynamic_lighting",
+        "Weather": "clear",
+        "Atmosphere": "mysterious",
+        "Size": "medium",
+        "Assets": [
+            "buildings",
+            "streetlights",
+            "benches",
+            "fountains",
+            "vehicles"
+        ]
+    }
+}

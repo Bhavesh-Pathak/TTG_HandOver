@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTG Genesis - Text to Game World Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-gamepad"></i>
+                <h1>TTG Genesis</h1>
+            </div>
+            <p class="subtitle">Transform your imagination into game worlds</p>
+        </header>
+
+        <main class="main-content">
+            <div class="prompt-section">
+                <div class="input-container">
+                    <label for="prompt-input" class="input-label">
+                        <i class="fas fa-magic"></i>
+                        Describe your game world
+                    </label>
+                    <textarea 
+                        id="prompt-input" 
+                        class="prompt-textarea" 
+                        placeholder="Create a haunted mansion where the player must solve 3 ancient puzzles to rescue a trapped ghost and find hidden treasure..."
+                        rows="4"
+                    ></textarea>
+                </div>
+
+                <div class="controls">
+                    <div class="model-selector">
+                        <label for="model-select">AI Model:</label>
+                        <select id="model-select" class="model-dropdown">
+                            <option value="llama2">Llama 2</option>
+                            <option value="llama3">Llama 3</option>
+                            <option value="mistral">Mistral</option>
+                            <option value="codellama">Code Llama</option>
+                        </select>
+                    </div>
+
+                    <div class="format-selector">
+                        <label for="format-select">Output Format:</label>
+                        <select id="format-select" class="format-dropdown">
+                            <option value="json">JSON</option>
+                            <option value="yaml">YAML</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="generate-btn" class="generate-button">
+                    <i class="fas fa-rocket"></i>
+                    Generate World
+                </button>
+            </div>
+
+            <div class="output-section" id="output-section" style="display: none;">
+                <div class="output-header">
+                    <h3><i class="fas fa-file-code"></i> Generated World Data</h3>
+                    <div class="output-actions">
+                        <button id="copy-btn" class="action-btn">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button id="download-btn" class="action-btn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+                <div class="output-content">
+                    <pre id="output-text"></pre>
+                </div>
+            </div>
+
+            <div class="status-section">
+                <div id="status-message" class="status-message"></div>
+                <div id="loading-spinner" class="loading-spinner" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <span>Generating your world...</span>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="examples">
+                <h4>Example Prompts:</h4>
+                <div class="example-tags">
+                    <span class="example-tag" onclick="setPrompt(this.textContent)">
+                        Create a forest level where the player has to complete 3 quests to save a village
+                    </span>
+                    <span class="example-tag" onclick="setPrompt(this.textContent)">
+                        Design a desert temple with ancient puzzles and treasure hunting mechanics
+                    </span>
+                    <span class="example-tag" onclick="setPrompt(this.textContent)">
+                        Build an underwater city level with swimming mechanics and sea creature NPCs
+                    </span>
+                    <span class="example-tag" onclick="setPrompt(this.textContent)">
+                        Create a haunted mansion with ghost NPCs and mystery-solving quests
+                    </span>
+                    <span class="example-tag" onclick="setPrompt(this.textContent)">
+                        Design a space station level with zero gravity mechanics and alien encounters
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+# TTG Genesis Configuration File
+# Configuration for the prompt parser and world generation system
+
+# Ollama LLM Configuration
+ollama:
+  host: "localhost"
+  port: 11434
+  model: "llama2"  # Options: llama2, llama3, mistral, codellama, etc.
+  timeout: 60
+  
+  # Model-specific settings
+  generation_options:
+    temperature: 0.7      # Creativity level (0.0 - 1.0)
+    top_p: 0.9           # Nucleus sampling
+    max_tokens: 2000     # Maximum response length
+    
+# Output Configuration
+output:
+  directory: "ue5_exports"
+  default_format: "json"  # json or yaml
+  include_metadata: true
+  pretty_print: true
+  
+# World Generation Settings
+world_generation:
+  # Default difficulty levels
+  difficulty_levels:
+    easy: 
+      quest_count: 1-2
+      npc_count: 2-4
+      complexity: "simple"
+    medium:
+      quest_count: 2-4
+      npc_count: 4-8
+      complexity: "moderate"
+    hard:
+      quest_count: 4-6
+      npc_count: 6-12
+      complexity: "complex"
+      
+  # Environment presets
+  environments:
+    forest:
+      default_assets: ["trees", "bushes", "rocks", "streams"]
+      lighting: "filtered_sunlight"
+      atmosphere: "peaceful"
+    desert:
+      default_assets: ["sand_dunes", "cacti", "rocks", "oasis"]
+      lighting: "harsh_sun"
+      atmosphere: "arid"
+    dungeon:
+      default_assets: ["stone_walls", "torches", "doors", "chests"]
+      lighting: "torch_light"
+      atmosphere: "mysterious"
+      
+# Fallback Templates
+fallback:
+  enabled: true
+  use_when_llm_fails: true
+  template_variety: "high"  # low, medium, high
+  
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "ttg_genesis.log"
+  console: true

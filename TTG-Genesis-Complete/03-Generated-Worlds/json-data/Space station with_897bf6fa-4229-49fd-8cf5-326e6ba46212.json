@@ -1,0 +1,157 @@
+{
+  "name": "Space station with",
+  "description": "Space station with alien NPCs and exploration quests",
+  "theme": "space",
+  "generated_at": "2025-08-11T12:21:20.027028",
+  "environment": {
+    "terrain": "artificial",
+    "lighting": "dynamic",
+    "weather": "controlled",
+    "structures": [
+      {
+        "type": "lab",
+        "name": "Research Laboratory",
+        "location": {
+          "x": 10,
+          "y": 0,
+          "z": 10
+        }
+      },
+      {
+        "type": "bridge",
+        "name": "Command Bridge",
+        "location": {
+          "x": 0,
+          "y": 5,
+          "z": 0
+        }
+      },
+      {
+        "type": "dock",
+        "name": "Docking Bay",
+        "location": {
+          "x": -15,
+          "y": 0,
+          "z": 20
+        }
+      }
+    ]
+  },
+  "npcs": [
+    {
+      "name": "Station Commander",
+      "type": "authority",
+      "dialogue": [
+        "Welcome aboard the station.",
+        "We have protocols to follow."
+      ],
+      "location": {
+        "x": -10,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "name": "Alien Researcher",
+      "type": "scientist",
+      "dialogue": [
+        "These artifacts are fascinating!",
+        "The implications are staggering."
+      ],
+      "location": {
+        "x": 0,
+        "y": 0,
+        "z": 10
+      }
+    },
+    {
+      "name": "Trader Pilot",
+      "type": "merchant",
+      "dialogue": [
+        "Rare goods from distant worlds!",
+        "Safe travels, spacer."
+      ],
+      "location": {
+        "x": 10,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "quests": [
+    {
+      "name": "Alien Artifacts",
+      "description": "Study mysterious alien artifacts found on the station",
+      "objectives": [
+        "Analyze the artifacts",
+        "Run safety protocols",
+        "Document findings"
+      ],
+      "rewards": [
+        "Scientific Recognition",
+        "Advanced Technology"
+      ]
+    },
+    {
+      "name": "Station Crisis",
+      "description": "Help resolve a critical situation threatening the station",
+      "objectives": [
+        "Investigate the anomaly",
+        "Coordinate with the crew",
+        "Implement the solution"
+      ],
+      "rewards": [
+        "Station Commendation",
+        "Command Access"
+      ]
+    }
+  ],
+  "player": {
+    "starting_position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "abilities": [
+      "walk",
+      "run",
+      "jump",
+      "interact"
+    ]
+  },
+  "combat": {
+    "enabled": true,
+    "combat_type": "real_time",
+    "weapons": [
+      "Laser Pistol",
+      "Energy Sword",
+      "Plasma Cannon"
+    ],
+    "enemies": [
+      "Alien Scout",
+      "Rogue Robot",
+      "Space Pirate"
+    ],
+    "mechanics": [
+      "health",
+      "stamina",
+      "blocking",
+      "dodging"
+    ]
+  },
+  "ue5_integration": {
+    "cpp_classes": [
+      "Space station withQuestSystem",
+      "Space station withNPCSystem",
+      "Space station withEnvironment"
+    ],
+    "blueprints": [
+      "BP_Space station with_QuestSystem",
+      "BP_Space station with_NPC",
+      "BP_Space station with_Environment"
+    ],
+    "level_name": "Space station with_Level",
+    "project_ready": false,
+    "auto_compile": false
+  }
+}

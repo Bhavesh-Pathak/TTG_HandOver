@@ -1,0 +1,35 @@
+{
+    "AssetData": {
+        "Models": [
+            "bench_park",
+            "building_house",
+            "car_generic",
+            "streetlight",
+            "fountain"
+        ],
+        "Textures": [
+            "concrete_sidewalk",
+            "metal_street",
+            "asphalt_road",
+            "glass_window",
+            "brick_building"
+        ],
+        "Sounds": [
+            "npc_talk",
+            "ambient_background",
+            "friendly_music",
+            "footsteps",
+            "ui_sounds"
+        ],
+        "Effects": [
+            "particle_dust",
+            "light_rays"
+        ],
+        "Animations": [
+            "npc_idle",
+            "npc_gesture",
+            "player_idle",
+            "player_walk"
+        ]
+    }
+}

@@ -1,0 +1,130 @@
+{
+    "metadata": {
+        "level_name": "Generated Desert Level",
+        "description": "A desert adventure generated from: Create a desert temple with ancient puzzles",
+        "difficulty": "medium",
+        "estimated_playtime": "30-45 minutes",
+        "theme": "desert"
+    },
+    "environment": {
+        "type": "desert",
+        "setting": "desert environment",
+        "terrain": [
+            "sand_dunes",
+            "rocky_outcrops",
+            "oasis",
+            "canyons"
+        ],
+        "lighting": "dynamic",
+        "weather": "clear",
+        "atmosphere": "mysterious",
+        "size": "medium",
+        "assets": [
+            "cacti",
+            "sand_dunes",
+            "rocks",
+            "palm_trees",
+            "ruins"
+        ]
+    },
+    "quests": [
+        {
+            "id": "desert_quest_1",
+            "name": "Find the Lost Oasis",
+            "type": "main",
+            "objective": "Locate the hidden oasis in the desert",
+            "description": "Travelers speak of a magical oasis that can save the dying town",
+            "requirements": [
+                "desert_map"
+            ],
+            "rewards": {
+                "experience": 150,
+                "gold": 75,
+                "items": [
+                    "water_crystal"
+                ]
+            },
+            "location": "deep_desert",
+            "estimated_time": "12 minutes"
+        }
+    ],
+    "npcs": [
+        {
+            "id": "generic_npc_1",
+            "name": "Mysterious Stranger",
+            "role": "guide",
+            "type": "neutral",
+            "location": "starting_point",
+            "dialogue": [
+                "Greetings, adventurer!",
+                "This place holds many secrets."
+            ],
+            "behavior": "helpful_guide",
+            "stats": {
+                "health": 100,
+                "attack": 10,
+                "defense": 20
+            },
+            "inventory": [
+                "map",
+                "compass"
+            ]
+        }
+    ],
+    "physics": {
+        "player_abilities": [
+            "walk",
+            "run",
+            "jump",
+            "interact"
+        ],
+        "movement_speed": 5.0,
+        "jump_height": 2.0,
+        "combat_system": "action_based",
+        "interaction_mechanics": [
+            "pickup_items",
+            "talk_to_npcs",
+            "open_doors"
+        ],
+        "special_mechanics": [
+            "quest_tracking",
+            "inventory_system"
+        ]
+    },
+    "win_conditions": [
+        "Complete all main quests"
+    ],
+    "lose_conditions": [
+        "Player health reaches 0"
+    ],
+    "assets_required": {
+        "models": [
+            "cactus_large",
+            "palm_tree",
+            "sand_dune",
+            "rock_desert",
+            "ruins_pillar"
+        ],
+        "textures": [
+            "sand_fine",
+            "rock_sandstone",
+            "palm_bark",
+            "cactus_skin",
+            "ruins_stone"
+        ],
+        "sounds": [
+            "ambient_nature",
+            "footsteps",
+            "ui_sounds"
+        ],
+        "effects": [
+            "particle_dust",
+            "light_rays"
+        ],
+        "animations": [
+            "player_walk",
+            "player_idle",
+            "npc_talk"
+        ]
+    }
+}

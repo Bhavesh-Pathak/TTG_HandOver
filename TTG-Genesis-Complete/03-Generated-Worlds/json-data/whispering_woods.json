@@ -1,0 +1,132 @@
+{
+    "metadata": {
+        "level_name": "Whispering Woods",
+        "description": "An immersive forest adventure: Create a rainy  World where the player has to remove water from his house which is flooding in to complete the quest and then clean the house",
+        "difficulty": "easy",
+        "estimated_playtime": "15-20 minutes",
+        "theme": "forest"
+    },
+    "environment": {
+        "type": "forest",
+        "setting": "A lush woodland area",
+        "terrain": [
+            "grass",
+            "dirt_paths",
+            "rocky_areas",
+            "streams"
+        ],
+        "lighting": "filtered_sunlight",
+        "weather": "stormy",
+        "atmosphere": "mysterious",
+        "size": "medium",
+        "assets": [
+            "trees",
+            "bushes",
+            "rocks",
+            "flowers",
+            "mushrooms"
+        ]
+    },
+    "quests": [
+        {
+            "id": "quest_1",
+            "name": "Explore the Unknown",
+            "type": "main",
+            "objective": "Discover the secrets of the mysterious_location",
+            "description": "Uncover the mysteries hidden within the mysterious_location",
+            "requirements": [],
+            "rewards": {
+                "experience": 100,
+                "gold": 50,
+                "items": [
+                    "quest_1_reward"
+                ]
+            },
+            "location": "mysterious_location",
+            "estimated_time": "10 minutes"
+        }
+    ],
+    "npcs": [
+        {
+            "id": "villager_npc",
+            "name": "Village Elder",
+            "role": "quest_giver",
+            "type": "friendly",
+            "location": "mysterious_location",
+            "dialogue": [
+                "Welcome, brave adventurer!",
+                "Our village needs your help!",
+                "Thank you for coming!"
+            ],
+            "behavior": "stationary_helpful",
+            "stats": {
+                "health": 100,
+                "attack": 0,
+                "defense": 10
+            },
+            "inventory": [
+                "villager_item",
+                "common_item"
+            ]
+        }
+    ],
+    "physics": {
+        "player_abilities": [
+            "walk",
+            "run",
+            "jump",
+            "interact"
+        ],
+        "movement_speed": 5.0,
+        "jump_height": 2.0,
+        "combat_system": "action_based",
+        "interaction_mechanics": [
+            "pickup_items",
+            "talk_to_npcs",
+            "activate_objects"
+        ],
+        "special_mechanics": [
+            "quest_tracking",
+            "inventory_system"
+        ]
+    },
+    "win_conditions": [
+        "Complete the main objective"
+    ],
+    "lose_conditions": [
+        "Player health reaches 0"
+    ],
+    "assets_required": {
+        "models": [
+            "rock_moss",
+            "bush_berry",
+            "flower_wild",
+            "tree_oak",
+            "tree_pine"
+        ],
+        "textures": [
+            "grass_forest",
+            "leaf_texture",
+            "dirt_path",
+            "moss_rock",
+            "bark_oak"
+        ],
+        "sounds": [
+            "ui_sounds",
+            "friendly_music",
+            "footsteps",
+            "ambient_background",
+            "npc_talk"
+        ],
+        "effects": [
+            "particle_dust",
+            "light_rays"
+        ],
+        "animations": [
+            "player_walk",
+            "npc_gesture",
+            "npc_idle",
+            "player_idle"
+        ]
+    }
+}

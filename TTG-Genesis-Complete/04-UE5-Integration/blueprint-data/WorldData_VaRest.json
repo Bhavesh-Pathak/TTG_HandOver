@@ -1,0 +1,140 @@
+{
+    "WorldData": {
+        "Metadata": {
+            "level_name": "The City",
+            "description": "An immersive urban adventure: Create a cyberpunk city level with hacking mechanics and robot NPCs",
+            "difficulty": "easy",
+            "estimated_playtime": "15-20 minutes",
+            "theme": "urban"
+        },
+        "Environment": {
+            "type": "urban",
+            "setting": "A bustling city environment",
+            "terrain": [
+                "streets",
+                "buildings",
+                "parks",
+                "plazas"
+            ],
+            "lighting": "dynamic_lighting",
+            "weather": "clear",
+            "atmosphere": "mysterious",
+            "size": "medium",
+            "assets": [
+                "buildings",
+                "streetlights",
+                "benches",
+                "fountains",
+                "vehicles"
+            ]
+        },
+        "Quests": [
+            {
+                "id": "quest_1",
+                "name": "Explore the Unknown",
+                "type": "main",
+                "objective": "Discover the secrets of the city",
+                "description": "Uncover the mysteries hidden within the city",
+                "requirements": [],
+                "rewards": {
+                    "experience": 100,
+                    "gold": 50,
+                    "items": [
+                        "quest_1_reward"
+                    ]
+                },
+                "location": "city",
+                "estimated_time": "10 minutes"
+            }
+        ],
+        "NPCs": [
+            {
+                "id": "villager_npc",
+                "name": "Village Elder",
+                "role": "quest_giver",
+                "type": "friendly",
+                "location": "city",
+                "dialogue": [
+                    "Welcome, brave adventurer!",
+                    "Our village needs your help!",
+                    "Thank you for coming!"
+                ],
+                "behavior": "stationary_helpful",
+                "stats": {
+                    "health": 100,
+                    "attack": 0,
+                    "defense": 10
+                },
+                "inventory": [
+                    "villager_item",
+                    "common_item"
+                ]
+            }
+        ],
+        "Physics": {
+            "player_abilities": [
+                "walk",
+                "run",
+                "jump",
+                "interact"
+            ],
+            "movement_speed": 5.0,
+            "jump_height": 2.0,
+            "combat_system": "action_based",
+            "interaction_mechanics": [
+                "pickup_items",
+                "talk_to_npcs",
+                "activate_objects"
+            ],
+            "special_mechanics": [
+                "quest_tracking",
+                "inventory_system"
+            ]
+        },
+        "WinConditions": [
+            "Complete the main objective"
+        ],
+        "LoseConditions": [
+            "Player health reaches 0"
+        ],
+        "AssetsRequired": {
+            "models": [
+                "bench_park",
+                "building_house",
+                "car_generic",
+                "streetlight",
+                "fountain"
+            ],
+            "textures": [
+                "concrete_sidewalk",
+                "metal_street",
+                "asphalt_road",
+                "glass_window",
+                "brick_building"
+            ],
+            "sounds": [
+                "npc_talk",
+                "ambient_background",
+                "friendly_music",
+                "footsteps",
+                "ui_sounds"
+            ],
+            "effects": [
+                "particle_dust",
+                "light_rays"
+            ],
+            "animations": [
+                "npc_idle",
+                "npc_gesture",
+                "player_idle",
+                "player_walk"
+            ]
+        }
+    },
+    "VaRestMetadata": {
+        "Version": "1.0",
+        "GeneratedBy": "TTG Genesis",
+        "Timestamp": "2025-01-01T00:00:00Z",
+        "Format": "VaRest Compatible"
+    }
+}

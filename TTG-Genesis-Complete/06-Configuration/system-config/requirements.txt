@@ -1,0 +1,23 @@
+# TTG Genesis - Complete System Dependencies
+# Core dependencies for the prompt parser system
+
+# HTTP requests for Ollama API
+requests>=2.31.0
+
+# YAML support for alternative output format
+PyYAML>=6.0.1
+
+# Type hints support (Python < 3.8)
+typing-extensions>=4.0.0
+
+# Optional: Enhanced JSON handling
+jsonschema>=4.17.0
+
+# Web server dependencies
+Flask>=2.3.0
+Flask-CORS>=4.0.0
+
+# Development dependencies (optional)
+# pytest>=7.0.0
+# black>=23.0.0
+# flake8>=6.0.0

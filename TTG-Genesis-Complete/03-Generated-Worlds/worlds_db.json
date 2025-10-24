@@ -1,0 +1,1471 @@
+{
+  "f5197fcc-be1c-4bdf-aee8-cffbdab38619": {
+    "id": "f5197fcc-be1c-4bdf-aee8-cffbdab38619",
+    "name": "Medieval castle with",
+    "prompt": "Medieval castle with knight NPCs and dragon boss fight",
+    "data": {
+      "name": "Medieval castle with",
+      "description": "Medieval castle with knight NPCs and dragon boss fight",
+      "theme": "medieval",
+      "generated_at": "2025-08-08T15:25:05.457511",
+      "environment": {
+        "terrain": "mountainous",
+        "lighting": "dynamic",
+        "weather": "overcast",
+        "structures": [
+          {
+            "type": "castle",
+            "name": "Royal Castle",
+            "location": {
+              "x": 0,
+              "y": 10,
+              "z": 0
+            }
+          },
+          {
+            "type": "barracks",
+            "name": "Guard Barracks",
+            "location": {
+              "x": -20,
+              "y": 0,
+              "z": -10
+            }
+          },
+          {
+            "type": "smithy",
+            "name": "Royal Smithy",
+            "location": {
+              "x": 15,
+              "y": 0,
+              "z": 15
+            }
+          }
+        ]
+      },
+      "npcs": [
+        {
+          "name": "Castle Guard",
+          "type": "protector",
+          "dialogue": [
+            "Halt! State your business.",
+            "The kingdom is under threat."
+          ],
+          "location": {
+            "x": -10,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "Royal Advisor",
+          "type": "quest_giver",
+          "dialogue": [
+            "The king requires your service.",
+            "Dark times are upon us."
+          ],
+          "location": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          }
+        },
+        {
+          "name": "Blacksmith",
+          "type": "merchant",
+          "dialogue": [
+            "Fine weapons and armor!",
+            "Forged with the finest steel."
+          ],
+          "location": {
+            "x": 10,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "quests": [
+        {
+          "name": "Defend the Castle",
+          "description": "Help defend the castle from the orc invasion",
+          "objectives": [
+            "Man the battlements",
+            "Repel the first wave",
+            "Defeat the orc chieftain"
+          ],
+          "rewards": [
+            "Knight's Honor",
+            "Royal Sword"
+          ]
+        },
+        {
+          "name": "Royal Mission",
+          "description": "Complete a secret mission for the king",
+          "objectives": [
+            "Meet the royal advisor",
+            "Infiltrate enemy territory",
+            "Retrieve the stolen artifact"
+          ],
+          "rewards": [
+            "Royal Favor",
+            "Legendary Equipment"
+          ]
+        }
+      ],
+      "player": {
+        "starting_position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "abilities": [
+          "walk",
+          "run",
+          "jump",
+          "interact"
+        ]
+      },
+      "combat": {
+        "enabled": true,
+        "combat_type": "real_time",
+        "weapons": [
+          "Steel Sword",
+          "War Hammer",
+          "Crossbow"
+        ],
+        "enemies": [
+          "Orc Warrior",
+          "Skeleton Knight",
+          "Dragon"
+        ],
+        "mechanics": [
+          "health",
+          "stamina",
+          "blocking",
+          "dodging"
+        ]
+      },
+      "ue5_integration": {
+        "cpp_classes": [
+          "Medieval castle withQuestSystem",
+          "Medieval castle withNPCSystem",
+          "Medieval castle withEnvironment"
+        ],
+        "blueprints": [
+          "BP_Medieval castle with_QuestSystem",
+          "BP_Medieval castle with_NPC",
+          "BP_Medieval castle with_Environment"
+        ],
+        "level_name": "Medieval castle with_Level",
+        "project_ready": false,
+        "auto_compile": false
+      }
+    },
+    "options": {
+      "includeQuests": true,
+      "includeNPCs": true,
+      "includeEnvironment": true,
+      "includeCombat": true,
+      "generateCpp": true,
+      "generateBlueprints": true
+    },
+    "created_at": "2025-08-08T15:25:05.457543",
+    "status": "cpp-ready"
+  },
+  "d316e025-4107-4a73-9c17-b86bbc3d385f": {
+    "id": "d316e025-4107-4a73-9c17-b86bbc3d385f",
+    "name": "Medieval castle with",
+    "prompt": "Medieval castle with knight NPCs and dragon boss fight",
+    "data": {
+      "name": "Medieval castle with",
+      "description": "Medieval castle with knight NPCs and dragon boss fight",
+      "theme": "medieval",
+      "generated_at": "2025-08-08T16:11:45.917401",
+      "environment": {
+        "terrain": "mountainous",
+        "lighting": "dynamic",
+        "weather": "overcast",
+        "structures": [
+          {
+            "type": "castle",
+            "name": "Royal Castle",
+            "location": {
+              "x": 0,
+              "y": 10,
+              "z": 0
+            }
+          },
+          {
+            "type": "barracks",
+            "name": "Guard Barracks",
+            "location": {
+              "x": -20,
+              "y": 0,
+              "z": -10
+            }
+          },
+          {
+            "type": "smithy",
+            "name": "Royal Smithy",
+            "location": {
+              "x": 15,
+              "y": 0,
+              "z": 15
+            }
+          }
+        ]
+      },
+      "npcs": [
+        {
+          "name": "Castle Guard",
+          "type": "protector",
+          "dialogue": [
+            "Halt! State your business.",
+            "The kingdom is under threat."
+          ],
+          "location": {
+            "x": -10,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "Royal Advisor",
+          "type": "quest_giver",
+          "dialogue": [
+            "The king requires your service.",
+            "Dark times are upon us."
+          ],
+          "location": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          }
+        },
+        {
+          "name": "Blacksmith",
+          "type": "merchant",
+          "dialogue": [
+            "Fine weapons and armor!",
+            "Forged with the finest steel."
+          ],
+          "location": {
+            "x": 10,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "quests": [
+        {
+          "name": "Defend the Castle",
+          "description": "Help defend the castle from the orc invasion",
+          "objectives": [
+            "Man the battlements",
+            "Repel the first wave",
+            "Defeat the orc chieftain"
+          ],
+          "rewards": [
+            "Knight's Honor",
+            "Royal Sword"
+          ]
+        },
+        {
+          "name": "Royal Mission",
+          "description": "Complete a secret mission for the king",
+          "objectives": [
+            "Meet the royal advisor",
+            "Infiltrate enemy territory",
+            "Retrieve the stolen artifact"
+          ],
+          "rewards": [
+            "Royal Favor",
+            "Legendary Equipment"
+          ]
+        }
+      ],
+      "player": {
+        "starting_position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "abilities": [
+          "walk",
+          "run",
+          "jump",
+          "interact"
+        ]
+      },
+      "combat": {
+        "enabled": true,
+        "combat_type": "real_time",
+        "weapons": [
+          "Steel Sword",
+          "War Hammer",
+          "Crossbow"
+        ],
+        "enemies": [
+          "Orc Warrior",
+          "Skeleton Knight",
+          "Dragon"
+        ],
+        "mechanics": [
+          "health",
+          "stamina",
+          "blocking",
+          "dodging"
+        ]
+      },
+      "ue5_integration": {
+        "cpp_classes": [
+          "Medieval castle withQuestSystem",
+          "Medieval castle withNPCSystem",
+          "Medieval castle withEnvironment"
+        ],
+        "blueprints": [
+          "BP_Medieval castle with_QuestSystem",
+          "BP_Medieval castle with_NPC",
+          "BP_Medieval castle with_Environment"
+        ],
+        "level_name": "Medieval castle with_Level",
+        "project_ready": false,
+        "auto_compile": false
+      }
+    },
+    "options": {
+      "includeQuests": true,
+      "includeNPCs": true,
+      "includeEnvironment": true,
+      "includeCombat": true,
+      "generateCpp": true,
+      "generateBlueprints": true
+    },
+    "created_at": "2025-08-08T16:11:45.917477",
+    "status": "cpp-ready"
+  },
+  "1dc7743a-70e2-4e1d-a0e9-4df1858ad6cb": {
+    "id": "1dc7743a-70e2-4e1d-a0e9-4df1858ad6cb",
+    "name": "Create a magical",
+    "prompt": "Create a magical forest with fairy NPCs",
+    "data": {
+      "name": "Create a magical",
+      "description": "Create a magical forest with fairy NPCs",
+      "theme": "forest",
+      "generated_at": "2025-08-11T12:20:46.871718",
+      "environment": {
+        "terrain": "forested",
+        "lighting": "dynamic",
+        "weather": "misty",
+        "structures": [
+          {
+            "type": "temple",
+            "name": "Ancient Temple",
+            "location": {
+              "x": 20,
+              "y": 0,
+              "z": 20
+            }
+          },
+          {
+            "type": "shrine",
+            "name": "Crystal Shrine",
+            "location": {
+              "x": -15,
+              "y": 0,
+              "z": 10
+            }
+          },
+          {
+            "type": "grove",
+            "name": "Sacred Grove",
+            "location": {
+              "x": 0,
+              "y": 0,
+              "z": -20
+            }
+          }
+        ]
+      },
+      "npcs": [
+        {
+          "name": "Forest Guardian",
+          "type": "friendly",
+          "dialogue": [
+            "Welcome to the magical forest!",
+            "Beware of the ancient dangers."
+          ],
+          "location": {
+            "x": -10,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "Fairy Guide",
+          "type": "helper",
+          "dialogue": [
+            "I can show you hidden paths!",
+            "The crystals hold great power."
+          ],
+          "location": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          }
+        },
+        {
+          "name": "Wise Elder",
+          "type": "quest_giver",
+          "dialogue": [
+            "I have a task for you, brave one.",
+            "The forest needs your help."
+          ],
+          "location": {
+            "x": 10,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "quests": [
+        {
+          "name": "Crystal Collection",
+          "description": "Collect enchanted crystals scattered throughout the forest",
+          "objectives": [
+            "Find 5 enchanted crystals",
+            "Return to the Fairy Guide"
+          ],
+          "rewards": [
+            "Magic Staff",
+            "Forest Blessing"
+          ]
+        },
+        {
+          "name": "Temple Exploration",
+          "description": "Explore the ancient temple and solve its mysteries",
+          "objectives": [
+            "Enter the hidden temple",
+            "Solve the crystal puzzle",
+            "Defeat the temple guardian"
+          ],
+          "rewards": [
+            "Ancient Artifact",
+            "Wisdom of the Ancients"
+          ]
+        }
+      ],
+      "player": {
+        "starting_position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "abilities": [
+          "walk",
+          "run",
+          "jump",
+          "interact"
+        ]
+      }
+    },
+    "options": {
+      "includeQuests": true,
+      "includeNPCs": true,
+      "includeEnvironment": true
+    },
+    "created_at": "2025-08-11T12:20:46.871767",
+    "status": "json-only"
+  },
+  "897bf6fa-4229-49fd-8cf5-326e6ba46212": {
+    "id": "897bf6fa-4229-49fd-8cf5-326e6ba46212",
+    "name": "Space station with",
+    "prompt": "Space station with alien NPCs and exploration quests",
+    "data": {
+      "name": "Space station with",
+      "description": "Space station with alien NPCs and exploration quests",
+      "theme": "space",
+      "generated_at": "2025-08-11T12:21:20.027028",
+      "environment": {
+        "terrain": "artificial",
+        "lighting": "dynamic",
+        "weather": "controlled",
+        "structures": [
+          {
+            "type": "lab",
+            "name": "Research Laboratory",
+            "location": {
+              "x": 10,
+              "y": 0,
+              "z": 10
+            }
+          },
+          {
+            "type": "bridge",
+            "name": "Command Bridge",
+            "location": {
+              "x": 0,
+              "y": 5,
+              "z": 0
+            }
+          },
+          {
+            "type": "dock",
+            "name": "Docking Bay",
+            "location": {
+              "x": -15,
+              "y": 0,
+              "z": 20
+            }
+          }
+        ]
+      },
+      "npcs": [
+        {
+          "name": "Station Commander",
+          "type": "authority",
+          "dialogue": [
+            "Welcome aboard the station.",
+            "We have protocols to follow."
+          ],
+          "location": {
+            "x": -10,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "Alien Researcher",
+          "type": "scientist",
+          "dialogue": [
+            "These artifacts are fascinating!",
+            "The implications are staggering."
+          ],
+          "location": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          }
+        },
+        {
+          "name": "Trader Pilot",
+          "type": "merchant",
+          "dialogue": [
+            "Rare goods from distant worlds!",
+            "Safe travels, spacer."
+          ],
+          "location": {
+            "x": 10,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "quests": [
+        {
+          "name": "Alien Artifacts",
+          "description": "Study mysterious alien artifacts found on the station",
+          "objectives": [
+            "Analyze the artifacts",
+            "Run safety protocols",
+            "Document findings"
+          ],
+          "rewards": [
+            "Scientific Recognition",
+            "Advanced Technology"
+          ]
+        },
+        {
+          "name": "Station Crisis",
+          "description": "Help resolve a critical situation threatening the station",
+          "objectives": [
+            "Investigate the anomaly",
+            "Coordinate with the crew",
+            "Implement the solution"
+          ],
+          "rewards": [
+            "Station Commendation",
+            "Command Access"
+          ]
+        }
+      ],
+      "player": {
+        "starting_position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "abilities": [
+          "walk",
+          "run",
+          "jump",
+          "interact"
+        ]
+      },
+      "combat": {
+        "enabled": true,
+        "combat_type": "real_time",
+        "weapons": [
+          "Laser Pistol",
+          "Energy Sword",
+          "Plasma Cannon"
+        ],
+        "enemies": [
+          "Alien Scout",
+          "Rogue Robot",
+          "Space Pirate"
+        ],
+        "mechanics": [
+          "health",
+          "stamina",
+          "blocking",
+          "dodging"
+        ]
+      },
+      "ue5_integration": {
+        "cpp_classes": [
+          "Space station withQuestSystem",
+          "Space station withNPCSystem",
+          "Space station withEnvironment"
+        ],
+        "blueprints": [
+          "BP_Space station with_QuestSystem",
+          "BP_Space station with_NPC",
+          "BP_Space station with_Environment"
+        ],
+        "level_name": "Space station with_Level",
+        "project_ready": false,
+        "auto_compile": false
+      }
+    },
+    "options": {
+      "includeQuests": true,
+      "includeNPCs": true,
+      "includeEnvironment": true,
+      "includeCombat": true,
+      "generateCpp": true,
+      "generateBlueprints": true
+    },
+    "created_at": "2025-08-11T12:21:20.027059",
+    "status": "cpp-ready"
+  },
+  "bec4cbd1-a627-48a2-afde-b7256b592a8e": {
+    "id": "bec4cbd1-a627-48a2-afde-b7256b592a8e",
+    "name": "Space station with",
+    "prompt": "Space station with alien NPCs and exploration quests",
+    "data": {
+      "name": "Space station with",
+      "description": "Space station with alien NPCs and exploration quests",
+      "theme": "space",
+      "generated_at": "2025-08-11T12:21:28.137174",
+      "environment": {
+        "terrain": "artificial",
+        "lighting": "dynamic",
+        "weather": "controlled",
+        "structures": [
+          {
+            "type": "lab",
+            "name": "Research Laboratory",
+            "location": {
+              "x": 10,
+              "y": 0,
+              "z": 10
+            }
+          },
+          {
+            "type": "bridge",
+            "name": "Command Bridge",
+            "location": {
+              "x": 0,
+              "y": 5,
+              "z": 0
+            }
+          },
+          {
+            "type": "dock",
+            "name": "Docking Bay",
+            "location": {
+              "x": -15,
+              "y": 0,
+              "z": 20
+            }
+          }
+        ]
+      },
+      "npcs": [
+        {
+          "name": "Station Commander",
+          "type": "authority",
+          "dialogue": [
+            "Welcome aboard the station.",
+            "We have protocols to follow."
+          ],
+          "location": {
+            "x": -10,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "Alien Researcher",
+          "type": "scientist",
+          "dialogue": [
+            "These artifacts are fascinating!",
+            "The implications are staggering."
+          ],
+          "location": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          }
+        },
+        {
+          "name": "Trader Pilot",
+          "type": "merchant",
+          "dialogue": [
+            "Rare goods from distant worlds!",
+            "Safe travels, spacer."
+          ],
+          "location": {
+            "x": 10,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "quests": [
+        {
+          "name": "Alien Artifacts",
+          "description": "Study mysterious alien artifacts found on the station",
+          "objectives": [
+            "Analyze the artifacts",
+            "Run safety protocols",
+            "Document findings"
+          ],
+          "rewards": [
+            "Scientific Recognition",
+            "Advanced Technology"
+          ]
+        },
+        {
+          "name": "Station Crisis",
+          "description": "Help resolve a critical situation threatening the station",
+          "objectives": [
+            "Investigate the anomaly",
+            "Coordinate with the crew",
+            "Implement the solution"
+          ],
+          "rewards": [
+            "Station Commendation",
+            "Command Access"
+          ]
+        }
+      ],
+      "player": {
+        "starting_position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "abilities": [
+          "walk",
+          "run",
+          "jump",
+          "interact"
+        ]
+      },
+      "combat": {
+        "enabled": true,
+        "combat_type": "real_time",
+        "weapons": [
+          "Laser Pistol",
+          "Energy Sword",
+          "Plasma Cannon"
+        ],
+        "enemies": [
+          "Alien Scout",
+          "Rogue Robot",
+          "Space Pirate"
+        ],
+        "mechanics": [
+          "health",
+          "stamina",
+          "blocking",
+          "dodging"
+        ]
+      },
+      "ue5_integration": {
+        "cpp_classes": [
+          "Space station withQuestSystem",
+          "Space station withNPCSystem",
+          "Space station withEnvironment"
+        ],
+        "blueprints": [
+          "BP_Space station with_QuestSystem",
+          "BP_Space station with_NPC",
+          "BP_Space station with_Environment"
+        ],
+        "level_name": "Space station with_Level",
+        "project_ready": false,
+        "auto_compile": false
+      }
+    },
+    "options": {
+      "includeQuests": true,
+      "includeNPCs": true,
+      "includeEnvironment": true,
+      "includeCombat": true,
+      "generateCpp": true,
+      "generateBlueprints": true
+    },
+    "created_at": "2025-08-11T12:21:28.137208",
+    "status": "cpp-ready"
+  },
+  "db9fb067-31a4-4ac2-a7c6-64fcb0ea6485": {
+    "id": "db9fb067-31a4-4ac2-a7c6-64fcb0ea6485",
+    "name": "Space station with",
+    "prompt": "Space station with alien NPCs and exploration quests",
+    "data": {
+      "name": "Space station with",
+      "description": "Space station with alien NPCs and exploration quests",
+      "theme": "space",
+      "generated_at": "2025-08-11T12:24:06.581313",
+      "environment": {
+        "terrain": "artificial",
+        "lighting": "dynamic",
+        "weather": "controlled",
+        "structures": [
+          {
+            "type": "lab",
+            "name": "Research Laboratory",
+            "location": {
+              "x": 10,
+              "y": 0,
+              "z": 10
+            }
+          },
+          {
+            "type": "bridge",
+            "name": "Command Bridge",
+            "location": {
+              "x": 0,
+              "y": 5,
+              "z": 0
+            }
+          },
+          {
+            "type": "dock",
+            "name": "Docking Bay",
+            "location": {
+              "x": -15,
+              "y": 0,
+              "z": 20
+            }
+          }
+        ]
+      },
+      "npcs": [
+        {
+          "name": "Station Commander",
+          "type": "authority",
+          "dialogue": [
+            "Welcome aboard the station.",
+            "We have protocols to follow."
+          ],
+          "location": {
+            "x": -10,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "Alien Researcher",
+          "type": "scientist",
+          "dialogue": [
+            "These artifacts are fascinating!",
+            "The implications are staggering."
+          ],
+          "location": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          }
+        },
+        {
+          "name": "Trader Pilot",
+          "type": "merchant",
+          "dialogue": [
+            "Rare goods from distant worlds!",
+            "Safe travels, spacer."
+          ],
+          "location": {
+            "x": 10,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "quests": [
+        {
+          "name": "Alien Artifacts",
+          "description": "Study mysterious alien artifacts found on the station",
+          "objectives": [
+            "Analyze the artifacts",
+            "Run safety protocols",
+            "Document findings"
+          ],
+          "rewards": [
+            "Scientific Recognition",
+            "Advanced Technology"
+          ]
+        },
+        {
+          "name": "Station Crisis",
+          "description": "Help resolve a critical situation threatening the station",
+          "objectives": [
+            "Investigate the anomaly",
+            "Coordinate with the crew",
+            "Implement the solution"
+          ],
+          "rewards": [
+            "Station Commendation",
+            "Command Access"
+          ]
+        }
+      ],
+      "player": {
+        "starting_position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "abilities": [
+          "walk",
+          "run",
+          "jump",
+          "interact"
+        ]
+      },
+      "combat": {
+        "enabled": true,
+        "combat_type": "real_time",
+        "weapons": [
+          "Laser Pistol",
+          "Energy Sword",
+          "Plasma Cannon"
+        ],
+        "enemies": [
+          "Alien Scout",
+          "Rogue Robot",
+          "Space Pirate"
+        ],
+        "mechanics": [
+          "health",
+          "stamina",
+          "blocking",
+          "dodging"
+        ]
+      },
+      "ue5_integration": {
+        "cpp_classes": [
+          "Space station withQuestSystem",
+          "Space station withNPCSystem",
+          "Space station withEnvironment"
+        ],
+        "blueprints": [
+          "BP_Space station with_QuestSystem",
+          "BP_Space station with_NPC",
+          "BP_Space station with_Environment"
+        ],
+        "level_name": "Space station with_Level",
+        "project_ready": false,
+        "auto_compile": false
+      }
+    },
+    "options": {
+      "includeQuests": true,
+      "includeNPCs": true,
+      "includeEnvironment": true,
+      "includeCombat": true,
+      "generateCpp": true,
+      "generateBlueprints": true
+    },
+    "created_at": "2025-08-11T12:24:06.581339",
+    "status": "cpp-ready"
+  },
+  "12f74b15-9f5d-4723-ab6f-84be96eecf9a": {
+    "id": "12f74b15-9f5d-4723-ab6f-84be96eecf9a",
+    "name": "Space station with",
+    "prompt": "Space station with alien NPCs and exploration quests",
+    "data": {
+      "name": "Space station with",
+      "description": "Space station with alien NPCs and exploration quests",
+      "theme": "space",
+      "generated_at": "2025-08-11T12:45:10.191714",
+      "environment": {
+        "terrain": "artificial",
+        "lighting": "dynamic",
+        "weather": "controlled",
+        "structures": [
+          {
+            "type": "lab",
+            "name": "Research Laboratory",
+            "location": {
+              "x": 10,
+              "y": 0,
+              "z": 10
+            }
+          },
+          {
+            "type": "bridge",
+            "name": "Command Bridge",
+            "location": {
+              "x": 0,
+              "y": 5,
+              "z": 0
+            }
+          },
+          {
+            "type": "dock",
+            "name": "Docking Bay",
+            "location": {
+              "x": -15,
+              "y": 0,
+              "z": 20
+            }
+          }
+        ]
+      },
+      "npcs": [
+        {
+          "name": "Station Commander",
+          "type": "authority",
+          "dialogue": [
+            "Welcome aboard the station.",
+            "We have protocols to follow."
+          ],
+          "location": {
+            "x": -10,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "Alien Researcher",
+          "type": "scientist",
+          "dialogue": [
+            "These artifacts are fascinating!",
+            "The implications are staggering."
+          ],
+          "location": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          }
+        },
+        {
+          "name": "Trader Pilot",
+          "type": "merchant",
+          "dialogue": [
+            "Rare goods from distant worlds!",
+            "Safe travels, spacer."
+          ],
+          "location": {
+            "x": 10,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "quests": [
+        {
+          "name": "Alien Artifacts",
+          "description": "Study mysterious alien artifacts found on the station",
+          "objectives": [
+            "Analyze the artifacts",
+            "Run safety protocols",
+            "Document findings"
+          ],
+          "rewards": [
+            "Scientific Recognition",
+            "Advanced Technology"
+          ]
+        },
+        {
+          "name": "Station Crisis",
+          "description": "Help resolve a critical situation threatening the station",
+          "objectives": [
+            "Investigate the anomaly",
+            "Coordinate with the crew",
+            "Implement the solution"
+          ],
+          "rewards": [
+            "Station Commendation",
+            "Command Access"
+          ]
+        }
+      ],
+      "player": {
+        "starting_position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "abilities": [
+          "walk",
+          "run",
+          "jump",
+          "interact"
+        ]
+      },
+      "ue5_integration": {
+        "cpp_classes": [
+          "Space station withQuestSystem",
+          "Space station withNPCSystem",
+          "Space station withEnvironment"
+        ],
+        "blueprints": [
+          "BP_Space station with_QuestSystem",
+          "BP_Space station with_NPC",
+          "BP_Space station with_Environment"
+        ],
+        "level_name": "Space station with_Level",
+        "project_ready": false,
+        "auto_compile": false
+      }
+    },
+    "options": {
+      "includeQuests": true,
+      "includeNPCs": true,
+      "includeEnvironment": true,
+      "includeCombat": false,
+      "generateCpp": true,
+      "generateBlueprints": true
+    },
+    "created_at": "2025-08-11T12:45:10.191740",
+    "status": "cpp-ready"
+  },
+  "ffc9e70c-2499-46d0-bdf2-5cf02e7867aa": {
+    "id": "ffc9e70c-2499-46d0-bdf2-5cf02e7867aa",
+    "name": "Create a Magical",
+    "prompt": "Create a Magical Castle Which is invaded by the skeleton army and The player as a knight need to rescue the princess to complete the quest",
+    "data": {
+      "name": "Create a Magical",
+      "description": "Create a Magical Castle Which is invaded by the skeleton army and The player as a knight need to rescue the princess to complete the quest",
+      "theme": "medieval",
+      "generated_at": "2025-08-11T12:46:13.378721",
+      "environment": {
+        "terrain": "mountainous",
+        "lighting": "dynamic",
+        "weather": "overcast",
+        "structures": [
+          {
+            "type": "castle",
+            "name": "Royal Castle",
+            "location": {
+              "x": 0,
+              "y": 10,
+              "z": 0
+            }
+          },
+          {
+            "type": "barracks",
+            "name": "Guard Barracks",
+            "location": {
+              "x": -20,
+              "y": 0,
+              "z": -10
+            }
+          },
+          {
+            "type": "smithy",
+            "name": "Royal Smithy",
+            "location": {
+              "x": 15,
+              "y": 0,
+              "z": 15
+            }
+          }
+        ]
+      },
+      "npcs": [
+        {
+          "name": "Castle Guard",
+          "type": "protector",
+          "dialogue": [
+            "Halt! State your business.",
+            "The kingdom is under threat."
+          ],
+          "location": {
+            "x": -10,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "Royal Advisor",
+          "type": "quest_giver",
+          "dialogue": [
+            "The king requires your service.",
+            "Dark times are upon us."
+          ],
+          "location": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          }
+        },
+        {
+          "name": "Blacksmith",
+          "type": "merchant",
+          "dialogue": [
+            "Fine weapons and armor!",
+            "Forged with the finest steel."
+          ],
+          "location": {
+            "x": 10,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "quests": [
+        {
+          "name": "Defend the Castle",
+          "description": "Help defend the castle from the orc invasion",
+          "objectives": [
+            "Man the battlements",
+            "Repel the first wave",
+            "Defeat the orc chieftain"
+          ],
+          "rewards": [
+            "Knight's Honor",
+            "Royal Sword"
+          ]
+        },
+        {
+          "name": "Royal Mission",
+          "description": "Complete a secret mission for the king",
+          "objectives": [
+            "Meet the royal advisor",
+            "Infiltrate enemy territory",
+            "Retrieve the stolen artifact"
+          ],
+          "rewards": [
+            "Royal Favor",
+            "Legendary Equipment"
+          ]
+        }
+      ],
+      "player": {
+        "starting_position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "abilities": [
+          "walk",
+          "run",
+          "jump",
+          "interact"
+        ]
+      },
+      "ue5_integration": {
+        "cpp_classes": [
+          "Create a MagicalQuestSystem",
+          "Create a MagicalNPCSystem",
+          "Create a MagicalEnvironment"
+        ],
+        "blueprints": [
+          "BP_Create a Magical_QuestSystem",
+          "BP_Create a Magical_NPC",
+          "BP_Create a Magical_Environment"
+        ],
+        "level_name": "Create a Magical_Level",
+        "project_ready": false,
+        "auto_compile": false
+      }
+    },
+    "options": {
+      "includeQuests": true,
+      "includeNPCs": true,
+      "includeEnvironment": true,
+      "includeCombat": false,
+      "generateCpp": true,
+      "generateBlueprints": true
+    },
+    "created_at": "2025-08-11T12:46:13.378743",
+    "status": "cpp-ready"
+  },
+  "a10db31c-57f7-40cb-aacc-227d2de91c2c": {
+    "id": "a10db31c-57f7-40cb-aacc-227d2de91c2c",
+    "name": "Create a Magical",
+    "prompt": "Create a Magical Castle Which is invaded by the skeleton army and The player as a knight need to rescue the princess to complete the quest",
+    "data": {
+      "name": "Create a Magical",
+      "description": "Create a Magical Castle Which is invaded by the skeleton army and The player as a knight need to rescue the princess to complete the quest",
+      "theme": "medieval",
+      "generated_at": "2025-08-11T12:47:18.518895",
+      "environment": {
+        "terrain": "mountainous",
+        "lighting": "dynamic",
+        "weather": "overcast",
+        "structures": [
+          {
+            "type": "castle",
+            "name": "Royal Castle",
+            "location": {
+              "x": 0,
+              "y": 10,
+              "z": 0
+            }
+          },
+          {
+            "type": "barracks",
+            "name": "Guard Barracks",
+            "location": {
+              "x": -20,
+              "y": 0,
+              "z": -10
+            }
+          },
+          {
+            "type": "smithy",
+            "name": "Royal Smithy",
+            "location": {
+              "x": 15,
+              "y": 0,
+              "z": 15
+            }
+          }
+        ]
+      },
+      "npcs": [
+        {
+          "name": "Castle Guard",
+          "type": "protector",
+          "dialogue": [
+            "Halt! State your business.",
+            "The kingdom is under threat."
+          ],
+          "location": {
+            "x": -10,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "name": "Royal Advisor",
+          "type": "quest_giver",
+          "dialogue": [
+            "The king requires your service.",
+            "Dark times are upon us."
+          ],
+          "location": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          }
+        },
+        {
+          "name": "Blacksmith",
+          "type": "merchant",
+          "dialogue": [
+            "Fine weapons and armor!",
+            "Forged with the finest steel."
+          ],
+          "location": {
+            "x": 10,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "quests": [
+        {
+          "name": "Defend the Castle",
+          "description": "Help defend the castle from the orc invasion",
+          "objectives": [
+            "Man the battlements",
+            "Repel the first wave",
+            "Defeat the orc chieftain"
+          ],
+          "rewards": [
+            "Knight's Honor",
+            "Royal Sword"
+          ]
+        },
+        {
+          "name": "Royal Mission",
+          "description": "Complete a secret mission for the king",
+          "objectives": [
+            "Meet the royal advisor",
+            "Infiltrate enemy territory",
+            "Retrieve the stolen artifact"
+          ],
+          "rewards": [
+            "Royal Favor",
+            "Legendary Equipment"
+          ]
+        }
+      ],
+      "player": {
+        "starting_position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "abilities": [
+          "walk",
+          "run",
+          "jump",
+          "interact"
+        ]
+      },
+      "combat": {
+        "enabled": true,
+        "combat_type": "real_time",
+        "weapons": [
+          "Steel Sword",
+          "War Hammer",
+          "Crossbow"
+        ],
+        "enemies": [
+          "Orc Warrior",
+          "Skeleton Knight",
+          "Dragon"
+        ],
+        "mechanics": [
+          "health",
+          "stamina",
+          "blocking",
+          "dodging"
+        ]
+      },
+      "ue5_integration": {
+        "cpp_classes": [
+          "Create a MagicalQuestSystem",
+          "Create a MagicalNPCSystem",
+          "Create a MagicalEnvironment"
+        ],
+        "blueprints": [
+          "BP_Create a Magical_QuestSystem",
+          "BP_Create a Magical_NPC",
+          "BP_Create a Magical_Environment"
+        ],
+        "level_name": "Create a Magical_Level",
+        "project_ready": false,
+        "auto_compile": false
+      }
+    },
+    "options": {
+      "includeQuests": true,
+      "includeNPCs": true,
+      "includeEnvironment": true,
+      "includeCombat": true,
+      "generateCpp": true,
+      "generateBlueprints": true
+    },
+    "created_at": "2025-08-11T12:47:18.518923",
+    "status": "cpp-ready"
+  }
+}

@@ -1,0 +1,36 @@
+{
+    "NPCSystemData": {
+        "TotalNPCs": 1,
+        "FriendlyNPCs": 1,
+        "HostileNPCs": 0,
+        "NPCs": [
+            {
+                "ID": "villager_npc",
+                "Name": "Village Elder",
+                "Role": "quest_giver",
+                "Type": "friendly",
+                "Location": "city",
+                "Dialogue": [
+                    "Welcome, brave adventurer!",
+                    "Our village needs your help!",
+                    "Thank you for coming!"
+                ],
+                "Behavior": "stationary_helpful",
+                "Stats": {
+                    "Health": 100,
+                    "Attack": 0,
+                    "Defense": 10
+                },
+                "Inventory": [
+                    "villager_item",
+                    "common_item"
+                ],
+                "SpawnLocation": {
+                    "X": 0,
+                    "Y": 0,
+                    "Z": 0
+                }
+            }
+        ]
+    }
+}

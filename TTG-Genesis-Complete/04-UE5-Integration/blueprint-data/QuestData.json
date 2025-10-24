@@ -1,0 +1,27 @@
+{
+    "QuestSystemData": {
+        "TotalQuests": 1,
+        "MainQuests": 1,
+        "SideQuests": 0,
+        "Quests": [
+            {
+                "ID": "quest_1",
+                "Name": "Explore the Unknown",
+                "Type": "main",
+                "Objective": "Discover the secrets of the city",
+                "Description": "Uncover the mysteries hidden within the city",
+                "Requirements": [],
+                "Rewards": {
+                    "Experience": 100,
+                    "Gold": 50,
+                    "Items": [
+                        "quest_1_reward"
+                    ]
+                },
+                "Location": "city",
+                "EstimatedTime": "10 minutes",
+                "Status": "NotStarted"
+            }
+        ]
+    }
+}

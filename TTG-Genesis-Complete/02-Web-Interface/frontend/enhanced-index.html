@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTG Genesis Enhanced - Full UE5 Integration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="enhanced-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <div class="container">
+        <header class="header enhanced">
+            <div class="logo">
+                <i class="fas fa-gamepad"></i>
+                <h1>TTG Genesis Enhanced</h1>
+                <span class="version-badge">v2.0</span>
+            </div>
+            <p class="subtitle">Transform your imagination into playable UE5 game worlds</p>
+            <div class="connection-status" id="ue5Status">
+                <i class="fas fa-circle" id="statusIcon"></i>
+                <span id="statusText">UE5 Disconnected</span>
+            </div>
+        </header>
+
+        <!-- Enhanced Navigation -->
+        <nav class="main-nav">
+            <button class="nav-btn active" data-section="generator">
+                <i class="fas fa-rocket"></i>
+                <span>World Generator</span>
+            </button>
+            <button class="nav-btn" data-section="gallery">
+                <i class="fas fa-images"></i>
+                <span>World Gallery</span>
+                <span class="nav-count" id="worldCount">0</span>
+            </button>
+            <button class="nav-btn" data-section="history">
+                <i class="fas fa-history"></i>
+                <span>Generation History</span>
+            </button>
+            <button class="nav-btn" data-section="settings">
+                <i class="fas fa-cog"></i>
+                <span>UE5 Settings</span>
+            </button>
+        </nav>
+
+        <main class="main-content">
+            <!-- World Generator Section -->
+            <section id="generator-section" class="main-section active">
+                <div class="prompt-section">
+                    <div class="input-container">
+                        <label for="prompt-input" class="input-label">
+                            <i class="fas fa-magic"></i>
+                            Describe your game world
+                        </label>
+                        <textarea 
+                            id="prompt-input" 
+                            class="prompt-textarea enhanced" 
+                            placeholder="Create a magical forest with fairy NPCs who give quests to collect enchanted crystals. Include a hidden temple with puzzle challenges and a wise dragon boss."
+                            rows="4"
+                        ></textarea>
+                    </div>
+
+                    <!-- Enhanced Options Panel -->
+                    <div class="options-panel">
+                        <h3><i class="fas fa-sliders-h"></i> Generation Options</h3>
+                        
+                        <!-- Content Options -->
+                        <div class="option-group">
+                            <h4><i class="fas fa-puzzle-piece"></i> Content Generation</h4>
+                            <div class="toggle-grid">
+                                <label class="toggle-option">
+                                    <input type="checkbox" id="includeQuests" checked>
+                                    <span class="toggle-slider"></span>
+                                    <span class="toggle-label">Quest System</span>
+                                </label>
+                                <label class="toggle-option">
+                                    <input type="checkbox" id="includeNPCs" checked>
+                                    <span class="toggle-slider"></span>
+                                    <span class="toggle-label">NPCs</span>
+                                </label>
+                                <label class="toggle-option">
+                                    <input type="checkbox" id="includeEnvironment" checked>
+                                    <span class="toggle-slider"></span>
+                                    <span class="toggle-label">Environment</span>
+                                </label>
+                                <label class="toggle-option">
+                                    <input type="checkbox" id="includeCombat" checked>
+                                    <span class="toggle-slider"></span>
+                                    <span class="toggle-label">Combat System</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- UE5 Integration Options -->
+                        <div class="option-group">
+                            <h4><i class="fas fa-gamepad"></i> UE5 Integration</h4>
+                            <div class="toggle-grid">
+                                <label class="toggle-option">
+                                    <input type="checkbox" id="generateCpp" checked>
+                                    <span class="toggle-slider"></span>
+                                    <span class="toggle-label">Generate C++</span>
+                                </label>
+                                <label class="toggle-option">
+                                    <input type="checkbox" id="generateBlueprints" checked>
+                                    <span class="toggle-slider"></span>
+                                    <span class="toggle-label">Auto-Create Blueprints</span>
+                                </label>
+                                <label class="toggle-option">
+                                    <input type="checkbox" id="generateLevel" checked>
+                                    <span class="toggle-slider"></span>
+                                    <span class="toggle-label">Generate Level</span>
+                                </label>
+                                <label class="toggle-option">
+                                    <input type="checkbox" id="autoCompile">
+                                    <span class="toggle-slider"></span>
+                                    <span class="toggle-label">Auto-Compile Project</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Project Options -->
+                        <div class="option-group">
+                            <h4><i class="fas fa-folder"></i> Project Setup</h4>
+                            <div class="project-options">
+                                <label class="radio-option">
+                                    <input type="radio" name="projectType" value="new" checked>
+                                    <span class="radio-custom"></span>
+                                    <span class="radio-label">Create New UE5 Project</span>
+                                    <small>Third-person template with TTG integration</small>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="projectType" value="existing">
+                                    <span class="radio-custom"></span>
+                                    <span class="radio-label">Add to Existing Project</span>
+                                    <small>Integrate with your current UE5 project</small>
+                                </label>
+                            </div>
+                            
+                            <div class="project-path-section" id="existingProjectPath" style="display: none;">
+                                <label for="projectPath">UE5 Project Path:</label>
+                                <div class="path-input-group">
+                                    <input type="text" id="projectPath" placeholder="C:\MyUE5Projects\MyGame">
+                                    <button type="button" id="browseProject" class="browse-btn">
+                                        <i class="fas fa-folder-open"></i> Browse
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Automation Level -->
+                        <div class="option-group">
+                            <h4><i class="fas fa-robot"></i> Automation Level</h4>
+                            <div class="automation-selector">
+                                <label class="radio-option">
+                                    <input type="radio" name="automationLevel" value="full" checked>
+                                    <span class="radio-custom"></span>
+                                    <div class="radio-content">
+                                        <span class="radio-label">Full Automation</span>
+                                        <small>Everything created automatically - just click and play!</small>
+                                    </div>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="automationLevel" value="selective">
+                                    <span class="radio-custom"></span>
+                                    <div class="radio-content">
+                                        <span class="radio-label">Selective Automation</span>
+                                        <small>Choose exactly what to create and customize</small>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Preview Options -->
+                        <div class="option-group">
+                            <h4><i class="fas fa-eye"></i> Preview Generation</h4>
+                            <div class="toggle-grid">
+                                <label class="toggle-option">
+                                    <input type="checkbox" id="generate3DPreview" checked>
+                                    <span class="toggle-slider"></span>
+                                    <span class="toggle-label">3D Web Preview</span>
+                                </label>
+                                <label class="toggle-option">
+                                    <input type="checkbox" id="generateScreenshots" checked>
+                                    <span class="toggle-slider"></span>
+                                    <span class="toggle-label">UE5 Screenshots</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Generate Button -->
+                    <button id="generate-btn" class="generate-button enhanced">
+                        <div class="btn-content">
+                            <i class="fas fa-rocket btn-icon"></i>
+                            <span class="btn-text">Generate World</span>
+                            <div class="btn-loading" style="display: none;">
+                                <div class="loading-spinner"></div>
+                                <span>Generating...</span>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Progress Panel -->
+                <div class="progress-panel" id="progressPanel" style="display: none;">
+                    <h3><i class="fas fa-tasks"></i> Generation Progress</h3>
+                    <div class="progress-steps">
+                        <div class="progress-step" data-step="parsing">
+                            <div class="step-icon"><i class="fas fa-brain"></i></div>
+                            <div class="step-info">
+                                <div class="step-title">Parsing Prompt</div>
+                                <div class="step-status">Waiting...</div>
+                                <div class="step-progress"><div class="progress-bar"></div></div>
+                            </div>
+                        </div>
+                        <div class="progress-step" data-step="generating">
+                            <div class="step-icon"><i class="fas fa-cogs"></i></div>
+                            <div class="step-info">
+                                <div class="step-title">Generating World Data</div>
+                                <div class="step-status">Waiting...</div>
+                                <div class="step-progress"><div class="progress-bar"></div></div>
+                            </div>
+                        </div>
+                        <div class="progress-step" data-step="cpp">
+                            <div class="step-icon"><i class="fas fa-code"></i></div>
+                            <div class="step-info">
+                                <div class="step-title">Creating C++ Code</div>
+                                <div class="step-status">Waiting...</div>
+                                <div class="step-progress"><div class="progress-bar"></div></div>
+                            </div>
+                        </div>
+                        <div class="progress-step" data-step="ue5">
+                            <div class="step-icon"><i class="fas fa-gamepad"></i></div>
+                            <div class="step-info">
+                                <div class="step-title">UE5 Integration</div>
+                                <div class="step-status">Waiting...</div>
+                                <div class="step-progress"><div class="progress-bar"></div></div>
+                            </div>
+                        </div>
+                        <div class="progress-step" data-step="preview">
+                            <div class="step-icon"><i class="fas fa-eye"></i></div>
+                            <div class="step-info">
+                                <div class="step-title">Generating Previews</div>
+                                <div class="step-status">Waiting...</div>
+                                <div class="step-progress"><div class="progress-bar"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section" id="output-section" style="display: none;">
+                    <div class="output-tabs">
+                        <button class="output-tab active" data-tab="preview">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                        <button class="output-tab" data-tab="json">
+                            <i class="fas fa-file-code"></i> JSON Data
+                        </button>
+                        <button class="output-tab" data-tab="cpp">
+                            <i class="fas fa-code"></i> C++ Code
+                        </button>
+                        <button class="output-tab" data-tab="blueprints">
+                            <i class="fas fa-project-diagram"></i> Blueprints
+                        </button>
+                    </div>
+
+                    <div class="output-content">
+                        <!-- Preview Tab -->
+                        <div id="preview-tab" class="tab-pane active">
+                            <div class="preview-container">
+                                <div class="preview-3d" id="preview3D">
+                                    <canvas id="threeCanvas"></canvas>
+                                    <div class="preview-controls">
+                                        <button class="preview-btn" id="resetView">
+                                            <i class="fas fa-home"></i> Reset View
+                                        </button>
+                                        <button class="preview-btn" id="toggleWireframe">
+                                            <i class="fas fa-cube"></i> Wireframe
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="preview-screenshots" id="previewScreenshots">
+                                    <h4>UE5 Screenshots</h4>
+                                    <div class="screenshot-grid" id="screenshotGrid">
+                                        <!-- Screenshots will be loaded here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- JSON Tab -->
+                        <div id="json-tab" class="tab-pane">
+                            <div class="output-header">
+                                <h3>Generated World Data</h3>
+                                <div class="output-actions">
+                                    <button class="action-btn" id="copyJson">
+                                        <i class="fas fa-copy"></i> Copy
+                                    </button>
+                                    <button class="action-btn" id="downloadJson">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                </div>
+                            </div>
+                            <pre id="jsonOutput" class="code-output"></pre>
+                        </div>
+
+                        <!-- C++ Tab -->
+                        <div id="cpp-tab" class="tab-pane">
+                            <div class="output-header">
+                                <h3>Generated C++ Code</h3>
+                                <div class="output-actions">
+                                    <button class="action-btn" id="copyCpp">
+                                        <i class="fas fa-copy"></i> Copy All
+                                    </button>
+                                    <button class="action-btn" id="downloadCpp">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="cpp-files" id="cppFiles">
+                                <!-- C++ files will be displayed here -->
+                            </div>
+                        </div>
+
+                        <!-- Blueprints Tab -->
+                        <div id="blueprints-tab" class="tab-pane">
+                            <div class="output-header">
+                                <h3>Blueprint Integration Data</h3>
+                                <div class="output-actions">
+                                    <button class="action-btn" id="copyBlueprints">
+                                        <i class="fas fa-copy"></i> Copy
+                                    </button>
+                                    <button class="action-btn" id="downloadBlueprints">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                </div>
+                            </div>
+                            <pre id="blueprintOutput" class="code-output"></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- World Gallery Section -->
+            <section id="gallery-section" class="main-section">
+                <div class="gallery-header">
+                    <h2><i class="fas fa-images"></i> World Gallery</h2>
+                    <div class="gallery-controls">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="gallerySearch" placeholder="Search worlds...">
+                        </div>
+                        <div class="filter-dropdown">
+                            <select id="galleryFilter">
+                                <option value="all">All Worlds</option>
+                                <option value="recent">Recent</option>
+                                <option value="favorites">Favorites</option>
+                                <option value="ue5-ready">UE5 Ready</option>
+                            </select>
+                        </div>
+                        <button class="action-btn" id="refreshGallery">
+                            <i class="fas fa-sync"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- World cards will be dynamically loaded here -->
+                    <div class="world-card sample">
+                        <div class="world-thumbnail">
+                            <img src="placeholder-world.jpg" alt="World Preview">
+                            <div class="world-overlay">
+                                <button class="overlay-btn" title="Preview">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="overlay-btn" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="overlay-btn delete" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="world-info">
+                            <h3 class="world-title">Sample Magical Forest</h3>
+                            <p class="world-description">A mystical forest with fairy NPCs and ancient temples...</p>
+                            <div class="world-stats">
+                                <span class="stat"><i class="fas fa-users"></i> 5 NPCs</span>
+                                <span class="stat"><i class="fas fa-tasks"></i> 3 Quests</span>
+                                <span class="stat"><i class="fas fa-gamepad"></i> UE5 Ready</span>
+                            </div>
+                            <div class="world-meta">
+                                <span class="world-date">Created: 2 hours ago</span>
+                                <span class="world-status ue5-ready">UE5 Integrated</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-empty" id="galleryEmpty" style="display: none;">
+                    <i class="fas fa-images"></i>
+                    <h3>No Worlds Yet</h3>
+                    <p>Generate your first world to see it here!</p>
+                    <button class="action-btn" onclick="switchSection('generator')">
+                        <i class="fas fa-plus"></i> Create First World
+                    </button>
+                </div>
+            </section>
+
+            <!-- Generation History Section -->
+            <section id="history-section" class="main-section">
+                <div class="history-header">
+                    <h2><i class="fas fa-history"></i> Generation History</h2>
+                    <div class="history-controls">
+                        <button class="action-btn" id="clearHistory">
+                            <i class="fas fa-trash"></i> Clear History
+                        </button>
+                        <button class="action-btn" id="exportHistory">
+                            <i class="fas fa-download"></i> Export History
+                        </button>
+                    </div>
+                </div>
+
+                <div class="history-timeline" id="historyTimeline">
+                    <!-- History items will be dynamically loaded here -->
+                    <div class="history-item sample">
+                        <div class="history-icon success">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="history-content">
+                            <div class="history-header">
+                                <h4>Magical Forest World</h4>
+                                <span class="history-time">2 hours ago</span>
+                            </div>
+                            <p class="history-prompt">"Create a magical forest with fairy NPCs..."</p>
+                            <div class="history-details">
+                                <span class="detail-item">
+                                    <i class="fas fa-clock"></i> 45s generation time
+                                </span>
+                                <span class="detail-item">
+                                    <i class="fas fa-code"></i> C++ Generated
+                                </span>
+                                <span class="detail-item">
+                                    <i class="fas fa-gamepad"></i> UE5 Integrated
+                                </span>
+                            </div>
+                            <div class="history-actions">
+                                <button class="history-btn" title="View World">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="history-btn" title="Regenerate">
+                                    <i class="fas fa-redo"></i>
+                                </button>
+                                <button class="history-btn" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-empty" id="historyEmpty" style="display: none;">
+                    <i class="fas fa-history"></i>
+                    <h3>No Generation History</h3>
+                    <p>Your generation history will appear here.</p>
+                </div>
+            </section>
+
+            <!-- UE5 Settings Section -->
+            <section id="settings-section" class="main-section">
+                <div class="settings-header">
+                    <h2><i class="fas fa-cog"></i> UE5 Settings & Configuration</h2>
+                </div>
+
+                <div class="settings-grid">
+                    <!-- UE5 Connection Settings -->
+                    <div class="settings-card">
+                        <h3><i class="fas fa-plug"></i> UE5 Connection</h3>
+                        <div class="setting-item">
+                            <label for="ue5Path">UE5 Installation Path:</label>
+                            <div class="path-input-group">
+                                <input type="text" id="ue5Path" placeholder="C:\Program Files\Epic Games\UE_5.3">
+                                <button type="button" id="browseUE5" class="browse-btn">
+                                    <i class="fas fa-folder-open"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="setting-item">
+                            <label for="pythonPath">Python Path (for UE5 automation):</label>
+                            <div class="path-input-group">
+                                <input type="text" id="pythonPath" placeholder="C:\Python39\python.exe">
+                                <button type="button" id="browsePython" class="browse-btn">
+                                    <i class="fas fa-folder-open"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="setting-actions">
+                            <button class="action-btn" id="testConnection">
+                                <i class="fas fa-plug"></i> Test Connection
+                            </button>
+                            <button class="action-btn" id="autoDetect">
+                                <i class="fas fa-search"></i> Auto-Detect
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project Templates -->
+                    <div class="settings-card">
+                        <h3><i class="fas fa-folder-plus"></i> Project Templates</h3>
+                        <div class="template-list">
+                            <div class="template-item">
+                                <div class="template-info">
+                                    <h4>Third Person Template</h4>
+                                    <p>Standard UE5 third-person template with TTG integration</p>
+                                </div>
+                                <div class="template-actions">
+                                    <button class="template-btn active">
+                                        <i class="fas fa-check"></i> Active
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="template-item">
+                                <div class="template-info">
+                                    <h4>First Person Template</h4>
+                                    <p>First-person template with TTG world generation</p>
+                                </div>
+                                <div class="template-actions">
+                                    <button class="template-btn">
+                                        <i class="fas fa-plus"></i> Enable
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Generation Settings -->
+                    <div class="settings-card">
+                        <h3><i class="fas fa-sliders-h"></i> Generation Settings</h3>
+                        <div class="setting-item">
+                            <label for="defaultModel">Default AI Model:</label>
+                            <select id="defaultModel">
+                                <option value="llama3">Llama 3</option>
+                                <option value="llama2">Llama 2</option>
+                                <option value="mistral">Mistral</option>
+                                <option value="codellama">Code Llama</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label for="maxWorlds">Maximum Stored Worlds:</label>
+                            <input type="number" id="maxWorlds" value="50" min="10" max="1000">
+                        </div>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" id="autoScreenshots" checked>
+                                Auto-generate UE5 screenshots
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" id="auto3DPreview" checked>
+                                Auto-generate 3D web previews
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- System Status -->
+                    <div class="settings-card">
+                        <h3><i class="fas fa-info-circle"></i> System Status</h3>
+                        <div class="status-grid">
+                            <div class="status-item">
+                                <div class="status-icon success">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="status-info">
+                                    <h4>Core System</h4>
+                                    <p>Running</p>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-icon warning">
+                                    <i class="fas fa-exclamation"></i>
+                                </div>
+                                <div class="status-info">
+                                    <h4>UE5 Connection</h4>
+                                    <p>Not Connected</p>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-icon success">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="status-info">
+                                    <h4>Python API</h4>
+                                    <p>Available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Enhanced Footer -->
+        <footer class="footer enhanced">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Examples</h4>
+                    <div class="example-tags">
+                        <span class="example-tag" onclick="setPrompt(this.textContent)">
+                            Cyberpunk city with hacker NPCs and data heist missions
+                        </span>
+                        <span class="example-tag" onclick="setPrompt(this.textContent)">
+                            Medieval castle siege with knight NPCs and defense quests
+                        </span>
+                        <span class="example-tag" onclick="setPrompt(this.textContent)">
+                            Space station with alien NPCs and exploration missions
+                        </span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>System Info</h4>
+                    <p>TTG Genesis Enhanced v2.0</p>
+                    <p>Full UE5 Integration • 3D Previews • World Management</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-exclamation-triangle"></i> Delete World</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this world?</p>
+                <p><strong>This will permanently delete:</strong></p>
+                <ul>
+                    <li>World JSON data</li>
+                    <li>Generated C++ files</li>
+                    <li>Created Blueprints</li>
+                    <li>UE5 level files</li>
+                    <li>All screenshots and previews</li>
+                </ul>
+                <p class="warning-text">This action cannot be undone!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" id="cancelDelete">Cancel</button>
+                <button class="btn-danger" id="confirmDelete">
+                    <i class="fas fa-trash"></i> Delete World
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="enhanced-script.js"></script>
+    <script src="three-preview.js"></script>
+</body>
+</html>

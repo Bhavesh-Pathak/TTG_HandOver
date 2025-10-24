@@ -1,0 +1,180 @@
+{
+    "metadata": {
+        "level_name": "The Ancient Hidden",
+        "description": "An immersive haunted adventure: Create a haunted mansion where the player must solve 3 ancient puzzles to rescue a trapped ghost and find hidden treasure",
+        "difficulty": "medium",
+        "estimated_playtime": "30-40 minutes",
+        "theme": "haunted"
+    },
+    "environment": {
+        "type": "haunted",
+        "setting": "A spooky supernatural location with ancient ruins and artifacts",
+        "terrain": [
+            "grass",
+            "dirt",
+            "rocks"
+        ],
+        "lighting": "dynamic_lighting",
+        "weather": "clear",
+        "atmosphere": "mysterious",
+        "size": "medium",
+        "assets": [
+            "generic_props",
+            "ancient_ruins",
+            "old_statues",
+            "weathered_stones",
+            "puzzle_mechanisms",
+            "switches",
+            "pressure_plates",
+            "treasure_chests",
+            "gold_coins",
+            "precious_gems"
+        ]
+    },
+    "quests": [
+        {
+            "id": "quest_1",
+            "name": "Gather Sacred Items",
+            "type": "main",
+            "objective": "Collect 3 herbs from the mysterious_location",
+            "description": "Ancient herbs are needed to save the village",
+            "requirements": [],
+            "rewards": {
+                "experience": 100,
+                "gold": 50,
+                "items": [
+                    "quest_1_reward"
+                ]
+            },
+            "location": "mysterious_location",
+            "estimated_time": "10 minutes"
+        },
+        {
+            "id": "quest_2",
+            "name": "Save the Villagers",
+            "type": "main",
+            "objective": "Rescue 3 {people} from {danger}",
+            "description": "Innocent {people} are trapped and need your help",
+            "requirements": [
+                "complete_quest_1"
+            ],
+            "rewards": {
+                "experience": 150,
+                "gold": 75,
+                "items": [
+                    "quest_2_reward"
+                ]
+            },
+            "location": "mysterious_location",
+            "estimated_time": "15 minutes"
+        },
+        {
+            "id": "quest_3",
+            "name": "Solve Ancient Mysteries",
+            "type": "side",
+            "objective": "Solve the {puzzle_type} to unlock {reward}",
+            "description": "Ancient {puzzle_type} guard the secrets of this place",
+            "requirements": [
+                "complete_quest_2"
+            ],
+            "rewards": {
+                "experience": 200,
+                "gold": 100,
+                "items": [
+                    "quest_3_reward"
+                ]
+            },
+            "location": "mysterious_location",
+            "estimated_time": "20 minutes"
+        }
+    ],
+    "npcs": [
+        {
+            "id": "ghost_npc",
+            "name": "Restless Spirit",
+            "role": "quest_giver",
+            "type": "friendly",
+            "location": "mysterious_location",
+            "dialogue": [
+                "*whispers eerily*",
+                "Help me find peace...",
+                "*fades away*"
+            ],
+            "behavior": "stationary_helpful",
+            "stats": {
+                "health": 100,
+                "attack": 0,
+                "defense": 10
+            },
+            "inventory": [
+                "ghost_item",
+                "common_item"
+            ]
+        }
+    ],
+    "physics": {
+        "player_abilities": [
+            "walk",
+            "run",
+            "jump",
+            "interact"
+        ],
+        "movement_speed": 5.0,
+        "jump_height": 2.0,
+        "combat_system": "action_based",
+        "interaction_mechanics": [
+            "pickup_items",
+            "talk_to_npcs",
+            "activate_objects"
+        ],
+        "special_mechanics": [
+            "quest_tracking",
+            "inventory_system",
+            "puzzle_solving"
+        ]
+    },
+    "win_conditions": [
+        "Complete all main quests",
+        "Successfully rescue all targets",
+        "Discover the hidden secret"
+    ],
+    "lose_conditions": [
+        "Player health reaches 0",
+        "Targets are not rescued in time"
+    ],
+    "assets_required": {
+        "models": [
+            "puzzle_pieces",
+            "item_glow",
+            "generic_prop",
+            "collectible_items",
+            "mechanisms"
+        ],
+        "textures": [
+            "generic_texture"
+        ],
+        "sounds": [
+            "puzzle_solve",
+            "ui_sounds",
+            "footsteps",
+            "npc_talk",
+            "mechanism_activate",
+            "item_collected",
+            "friendly_music",
+            "pickup_sound",
+            "ambient_background"
+        ],
+        "effects": [
+            "light_rays",
+            "particle_dust",
+            "puzzle_glow",
+            "pickup_sparkle"
+        ],
+        "animations": [
+            "player_idle",
+            "player_walk",
+            "npc_gesture",
+            "npc_idle"
+        ]
+    }
+}

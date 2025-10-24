@@ -1,0 +1,231 @@
+{
+    "metadata": {
+        "level_name": "The Ancient Magical",
+        "description": "An immersive forest adventure: Create a magical forest temple where the player must collect 5 ancient crystals and defeat a dragon to save the fairy kingdom",
+        "difficulty": "easy",
+        "estimated_playtime": "30-40 minutes",
+        "theme": "forest"
+    },
+    "environment": {
+        "type": "forest",
+        "setting": "A lush woodland area with ancient ruins and artifacts infused with magical energy",
+        "terrain": [
+            "grass",
+            "dirt_paths",
+            "rocky_areas",
+            "streams"
+        ],
+        "lighting": "dynamic_lighting",
+        "weather": "clear",
+        "atmosphere": "magical",
+        "size": "medium",
+        "assets": [
+            "trees",
+            "bushes",
+            "rocks",
+            "flowers",
+            "mushrooms",
+            "ancient_ruins",
+            "old_statues",
+            "weathered_stones",
+            "glowing_crystals",
+            "magic_circles",
+            "enchanted_items",
+            "temple_pillars",
+            "altar",
+            "sacred_symbols"
+        ]
+    },
+    "quests": [
+        {
+            "id": "quest_1",
+            "name": "Gather Sacred Items",
+            "type": "main",
+            "objective": "Collect 3 herbs from the temple",
+            "description": "Ancient herbs are needed to save the village",
+            "requirements": [],
+            "rewards": {
+                "experience": 100,
+                "gold": 50,
+                "items": [
+                    "quest_1_reward"
+                ]
+            },
+            "location": "temple",
+            "estimated_time": "10 minutes"
+        },
+        {
+            "id": "quest_2",
+            "name": "Defeat the Guardian",
+            "type": "main",
+            "objective": "Defeat the guardian that guards the temple",
+            "description": "A powerful guardian blocks your path to treasure",
+            "requirements": [
+                "complete_quest_1"
+            ],
+            "rewards": {
+                "experience": 150,
+                "gold": 75,
+                "items": [
+                    "quest_2_reward"
+                ]
+            },
+            "location": "temple",
+            "estimated_time": "15 minutes"
+        },
+        {
+            "id": "quest_3",
+            "name": "Save the Villagers",
+            "type": "main",
+            "objective": "Rescue 3 villagers from bandits",
+            "description": "Innocent villagers are trapped and need your help",
+            "requirements": [
+                "complete_quest_2"
+            ],
+            "rewards": {
+                "experience": 200,
+                "gold": 100,
+                "items": [
+                    "quest_3_reward"
+                ]
+            },
+            "location": "temple",
+            "estimated_time": "20 minutes"
+        },
+        {
+            "id": "quest_4",
+            "name": "Gather Sacred Items",
+            "type": "side",
+            "objective": "Collect 3 herbs from the temple",
+            "description": "Ancient herbs are needed to save the village",
+            "requirements": [
+                "complete_quest_3"
+            ],
+            "rewards": {
+                "experience": 250,
+                "gold": 125,
+                "items": [
+                    "quest_4_reward"
+                ]
+            },
+            "location": "temple",
+            "estimated_time": "25 minutes"
+        },
+        {
+            "id": "quest_5",
+            "name": "Defeat the Guardian",
+            "type": "side",
+            "objective": "Defeat the guardian that guards the temple",
+            "description": "A powerful guardian blocks your path to treasure",
+            "requirements": [
+                "complete_quest_4"
+            ],
+            "rewards": {
+                "experience": 300,
+                "gold": 150,
+                "items": [
+                    "quest_5_reward"
+                ]
+            },
+            "location": "temple",
+            "estimated_time": "30 minutes"
+        }
+    ],
+    "npcs": [
+        {
+            "id": "villager_npc",
+            "name": "Village Elder",
+            "role": "quest_giver",
+            "type": "friendly",
+            "location": "temple",
+            "dialogue": [
+                "Welcome, brave adventurer!",
+                "Our village needs your help!",
+                "Thank you for coming!"
+            ],
+            "behavior": "stationary_helpful",
+            "stats": {
+                "health": 100,
+                "attack": 0,
+                "defense": 10
+            },
+            "inventory": [
+                "villager_item",
+                "common_item"
+            ]
+        }
+    ],
+    "physics": {
+        "player_abilities": [
+            "walk",
+            "run",
+            "jump",
+            "interact",
+            "cast_spells"
+        ],
+        "movement_speed": 5.0,
+        "jump_height": 2.0,
+        "combat_system": "action_based",
+        "interaction_mechanics": [
+            "pickup_items",
+            "talk_to_npcs",
+            "activate_objects"
+        ],
+        "special_mechanics": [
+            "quest_tracking",
+            "inventory_system"
+        ]
+    },
+    "win_conditions": [
+        "Complete all main quests",
+        "Successfully rescue all targets",
+        "Defeat all hostile enemies"
+    ],
+    "lose_conditions": [
+        "Player health reaches 0"
+    ],
+    "assets_required": {
+        "models": [
+            "collectible_items",
+            "flower_wild",
+            "weapon_sword",
+            "rock_moss",
+            "bush_berry",
+            "item_glow",
+            "shield",
+            "tree_oak",
+            "tree_pine"
+        ],
+        "textures": [
+            "leaf_texture",
+            "bark_oak",
+            "moss_rock",
+            "dirt_path",
+            "grass_forest"
+        ],
+        "sounds": [
+            "friendly_music",
+            "weapon_clash",
+            "footsteps",
+            "pickup_sound",
+            "combat_sounds",
+            "item_collected",
+            "ui_sounds",
+            "npc_talk",
+            "ambient_background"
+        ],
+        "effects": [
+            "light_rays",
+            "pickup_sparkle",
+            "particle_dust"
+        ],
+        "animations": [
+            "defend_animation",
+            "npc_idle",
+            "attack_animation",
+            "player_walk",
+            "player_idle",
+            "npc_gesture"
+        ]
+    }
+}
